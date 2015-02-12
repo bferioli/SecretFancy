@@ -22,18 +22,34 @@
 				</p>
 			</header>
 			<section id="send-fancy">
-				<button>Send a fancy</button>
-				<form action="">
-					<label for="email">Recipient's email:</label>
-					<input type="email" name="email" id="email">
-					<label for="message">Message to your fancy:</label>
-					<textarea name="message" id="message"></textarea>
-					<label for="first">Your first name (hidden, used only for matching):</label>
-					<input type="text" name="first" id="first">
-					<input type="submit" value="Send">
-				</form>
+				<button id="send-button">Send a fancy</button>
 			</section>
 			<footer></footer>
 		</div>
+
+		<script type="text/x-handlebars-template" id="FancyFormTemplate">
+			<form id="fancy-form" action="">
+				<label for="first_name">Your first name (hidden, used only for matching):</label>
+				<input type="text" name="first_name" id="first_name" value="{{first_name}}">
+				<label for="email">Recipient's email:</label>
+				<input type="email" name="email" id="email">
+				<label for="message">Message to your fancy:</label>
+				<textarea name="message" id="message"></textarea>
+				<input type="submit" value="Send now" id="send-now">
+			</form>
+		</script>
+
+		<script type="text/javascript" src="js/lib/jquery.js"></script>
+		<script type="text/javascript" src="js/lib/underscore.js"></script>
+		<script type="text/javascript" src="js/lib/backbone.js"></script>
+		<script type="text/javascript" src="js/lib/handlebars.js"></script>
+
+		<script type="text/javascript" src="js/models/fancy.js"></script>
+		<script type="text/javascript" src="js/views/fancyForm.js"></script>
+
+		<script type="text/javascript" src="js/models/user.js"></script>
+
+		<script type="text/javascript" src="js/auth.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
 	</body>
 </html>
