@@ -1,9 +1,18 @@
 *
 	+box-sizing(border-box)
 
+html
+	font-size: 14px
+
 #main
 	max-width: 800px
 	margin: 0 auto
-	padding: 30px
+	padding: 20px
 	& > header
 		margin-bottom: 3rem
+
+@media (min-width:720px)
+	html
+		font-size: 16px
+	#main
+		padding: 30px
