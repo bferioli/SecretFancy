@@ -1,0 +1,189 @@
+/* line 17, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "ThirstyScriptBold";
+  src: url(/fonts/2D548D_0_0.eot) format('embedded-opentype'), url(/fonts/2D548D_0_0.eot?#iefix) format('embedded-opentype'), url(/fonts/2D548D_0_0.woff) format('woff'), url(/fonts/2D548D_0_0.ttf) format('truetype');
+}
+
+/* line 6, ../sass/_typography.sass */
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 10, ../sass/_typography.sass */
+h1 {
+  font-family: "ThirstyScriptBold";
+  font-size: 4.5rem;
+  text-align: center;
+  font-weight: 300;
+  margin: 4.5rem 0 3rem;
+}
+
+/* line 17, ../sass/_typography.sass */
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 2.5rem;
+}
+/* line 22, ../sass/_typography.sass */
+h2.subtitle {
+  margin: 3rem 0;
+}
+
+/* line 25, ../sass/_typography.sass */
+h3 {
+  font-size: 1.7rem;
+  margin: 1.7rem 0;
+}
+
+/* line 29, ../sass/_typography.sass */
+h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2rem;
+  margin: 0.6rem 0;
+}
+
+/* line 35, ../sass/_typography.sass */
+.heart {
+  color: red;
+  font-size: 0.5em;
+  position: relative;
+  top: -0.25em;
+}
+
+/* line 41, ../sass/_typography.sass */
+.new {
+  font-size: 0.8rem;
+  background: red;
+  color: white;
+  margin-right: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  position: relative;
+  top: -0.2rem;
+}
+
+/* line 1, ../sass/_layout.sass */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 4, ../sass/_layout.sass */
+#main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+}
+/* line 8, ../sass/_layout.sass */
+#main > header {
+  margin-bottom: 3rem;
+}
+
+/* line 2, ../sass/_forms.sass */
+#fancy-form label, #fancy-form input, #fancy-form textarea {
+  display: block;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  border-radius: 3px;
+}
+/* line 8, ../sass/_forms.sass */
+#fancy-form label {
+  margin-bottom: 0.33rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* line 14, ../sass/_forms.sass */
+#fancy-form input[type="email"], #fancy-form input[type="text"], #fancy-form textarea {
+  color: #222222;
+  border: 2px solid #dddddd;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  -webkit-transition: border-color 200ms ease-in-out;
+  -moz-transition: border-color 200ms ease-in-out;
+  -o-transition: border-color 200ms ease-in-out;
+  transition: border-color 200ms ease-in-out;
+}
+/* line 22, ../sass/_forms.sass */
+#fancy-form input[type="email"]:focus, #fancy-form input[type="text"]:focus, #fancy-form textarea:focus {
+  border-color: red;
+  box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.2);
+  outline: none;
+}
+/* line 27, ../sass/_forms.sass */
+#fancy-form input[type="submit"], #fancy-form input[type="button"] {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  background: red;
+  font-size: 1.4rem;
+  color: white;
+  border: none;
+}

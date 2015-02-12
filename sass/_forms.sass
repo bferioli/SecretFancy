@@ -1,0 +1,33 @@
+#fancy-form
+	label, input, textarea
+		display: block
+		font-family: $sans-serif
+		width: 100%
+		border-radius: 3px
+
+	label
+		margin-bottom: .33rem
+		font-size: .8rem
+		font-weight: 700
+		text-transform: uppercase
+
+	input[type="email"], input[type="text"], textarea
+		color: #222
+		border: 2px solid #ddd
+		font-size: 1.4rem
+		font-weight: 300
+		padding: 0.5rem
+		margin-bottom: 1rem
+		+transition(border-color 200ms ease-in-out)
+		&:focus
+			border-color: red
+			box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.2)
+			outline: none
+
+	input[type="submit"], input[type="button"]
+		margin: 0
+		padding: 0.5rem 1rem
+		background: red
+		font-size: 1.4rem
+		color: #fff
+		border: none
