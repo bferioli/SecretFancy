@@ -78,29 +78,33 @@ h1 {
   font-family: "ThirstyScriptBold";
   font-size: 4.5rem;
   text-align: center;
-  font-weight: 300;
   margin: 4.5rem 0 3rem;
 }
+/* line 15, ../sass/_typography.sass */
+h1.small {
+  font-size: 3rem;
+  margin: 2rem 0;
+}
 
-/* line 17, ../sass/_typography.sass */
+/* line 19, ../sass/_typography.sass */
 h2 {
   font-size: 2rem;
   font-weight: 300;
   text-align: center;
   line-height: 2.5rem;
 }
-/* line 22, ../sass/_typography.sass */
+/* line 24, ../sass/_typography.sass */
 h2.subtitle {
   margin: 3rem 0;
 }
 
-/* line 25, ../sass/_typography.sass */
+/* line 27, ../sass/_typography.sass */
 h3 {
   font-size: 1.7rem;
   margin: 1.7rem 0;
 }
 
-/* line 29, ../sass/_typography.sass */
+/* line 31, ../sass/_typography.sass */
 h4 {
   font-size: 1.4rem;
   font-weight: 700;
@@ -108,7 +112,14 @@ h4 {
   margin: 0.6rem 0;
 }
 
-/* line 35, ../sass/_typography.sass */
+/* line 37, ../sass/_typography.sass */
+h5 {
+  font-size: 1.4rem;
+  font-family: "ThirstyScriptBold";
+  margin-bottom: 1.4rem;
+}
+
+/* line 42, ../sass/_typography.sass */
 .heart {
   color: red;
   font-size: 0.5em;
@@ -116,7 +127,15 @@ h4 {
   top: -0.25em;
 }
 
-/* line 41, ../sass/_typography.sass */
+/* line 49, ../sass/_typography.sass */
+.message p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+/* line 55, ../sass/_typography.sass */
 .new {
   font-size: 0.8rem;
   background: red;
