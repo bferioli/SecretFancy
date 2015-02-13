@@ -1,13 +1,25 @@
 var FancyForm = Backbone.View.extend({
 	el: '#send-fancy',
 	events: {
+		'change input[name=delivery]': 'changeDelivery',
 		'change #first_name': 'changeFirstName',
+		'change #phone': 'changePhone',
 		'change #email': 'changeEmail',
 		'change #message': 'changeMessage',
 		'submit #fancy-form': 'sendMessage'
 	},
+	changeDelivery: function(){
+		var delivery = this.$el.find('input[name=delivery]:checked').val();
+		this.phoneGroup.toggle();
+		this.emailGroup.toggle();
+		this.model.set({'delivery': delivery});
+	},
 	changeFirstName: function(){
 		this.model.set({'first_name': this.firstName.val()});
+	},
+	changePhone: function(){
+		var phone = "+1" + this.phone.val().replace(/\D/g,'');
+		this.model.set({'phone': phone});
 	},
 	changeEmail: function(){
 		this.model.set({'email': this.email.val()});
@@ -21,9 +33,15 @@ var FancyForm = Backbone.View.extend({
 	},
 	initialize: function(){
 		this.render();
+
 		this.firstName = this.$el.find('#first_name');
+		this.phone = this.$el.find('#phone');
+		this.phoneGroup = this.$el.find('.phone-group');
 		this.email = this.$el.find('#email');
+		this.emailGroup = this.$el.find('.email-group');
 		this.message = this.$el.find('#message');
+
+		this.phone.mask("(999) 999-9999");
 	},
 	render: function(){
 		var source = $('#FancyFormTemplate').html();

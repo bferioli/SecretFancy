@@ -21,7 +21,6 @@
 		margin-bottom: .33rem
 		font-size: .8rem
 		font-weight: 700
-		text-transform: uppercase
 
 	input[type="email"], input[type="text"], textarea
 		color: #222
@@ -50,3 +49,28 @@
 			-webkit-transform: translateZ(0)
 		&.fb-auth
 			background: #3b5999
+
+	.email-group
+		display: none
+
+	.toggle-group
+		margin-bottom: 1rem
+		overflow: auto
+	
+	.custom-toggle
+		float: left
+		width: 50%
+		input[type="radio"]
+			display: none
+		.option
+			background: #666
+			color: $white
+			font-size: 1.4rem
+			padding: 0.5rem 1rem
+		input:checked + .option
+			background: $red
+		&:first-child .option
+			border-radius: 3px 0 0 3px
+		&:last-child .option
+			border-radius: 0 3px 3px 0
+

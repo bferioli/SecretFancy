@@ -29,17 +29,34 @@
 
 		<script type="text/x-handlebars-template" id="FancyFormTemplate">
 			<form id="fancy-form" action="">
+				<div class="toggle-group">
+					<label class="custom-toggle">
+						<input type="radio" name="delivery" value="text" checked>
+						<div class="option">Text <span class="tiny">(US only)</span></div>
+					</label>
+					<label class="custom-toggle">
+						<input type="radio" name="delivery" value="email">
+						<div class="option">Email</div>
+					</label>
+				</div>
 				<label for="first_name">Recipient's first name:</label>
-				<input type="text" name="first_name" id="first_name">
-				<label for="email">Recipient's email:</label>
-				<input type="email" name="email" id="email">
+				<input type="text" name="first_name" id="first_name" required>
+				<div class="phone-group">
+					<label for="phone">Recipient's phone number:</label>
+					<input type="text" name="phone" id="phone">
+				</div>
+				<div class="email-group">
+					<label for="email">Recipient's email:</label>
+					<input type="email" name="email" id="email">
+				</div>
 				<label for="message">Message to your fancy:</label>
-				<textarea name="message" id="message"></textarea>
+				<textarea name="message" id="message" required></textarea>
 				<input type="submit" value="Send now" id="send-now">
 			</form>
 		</script>
 
 		<script type="text/javascript" src="/js/lib/jquery.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.maskedinput.js"></script>
 		<script type="text/javascript" src="/js/lib/underscore.js"></script>
 		<script type="text/javascript" src="/js/lib/backbone.js"></script>
 		<script type="text/javascript" src="/js/lib/handlebars.js"></script>

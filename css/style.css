@@ -230,9 +230,8 @@ html {
   margin-bottom: 0.33rem;
   font-size: 0.8rem;
   font-weight: 700;
-  text-transform: uppercase;
 }
-/* line 26, ../sass/_forms.sass */
+/* line 25, ../sass/_forms.sass */
 #send-fancy input[type="email"], #send-fancy input[type="text"], #send-fancy textarea {
   color: #222222;
   border: 2px solid #dddddd;
@@ -245,13 +244,13 @@ html {
   -o-transition: border-color 200ms ease-in-out;
   transition: border-color 200ms ease-in-out;
 }
-/* line 34, ../sass/_forms.sass */
+/* line 33, ../sass/_forms.sass */
 #send-fancy input[type="email"]:focus, #send-fancy input[type="text"]:focus, #send-fancy textarea:focus {
   border-color: red;
   box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.2);
   outline: none;
 }
-/* line 39, ../sass/_forms.sass */
+/* line 38, ../sass/_forms.sass */
 #send-fancy button, #send-fancy input[type="button"], #send-fancy input[type="submit"] {
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
@@ -260,14 +259,51 @@ html {
   color: white;
   border: none;
 }
-/* line 46, ../sass/_forms.sass */
+/* line 45, ../sass/_forms.sass */
 #send-fancy button:disabled, #send-fancy input[type="button"]:disabled, #send-fancy input[type="submit"]:disabled {
   background: #aaaaaa;
   animation: pulse 1s infinite;
   -webkit-animation: pulse 1s infinite;
   -webkit-transform: translateZ(0);
 }
-/* line 51, ../sass/_forms.sass */
+/* line 50, ../sass/_forms.sass */
 #send-fancy button.fb-auth, #send-fancy input[type="button"].fb-auth, #send-fancy input[type="submit"].fb-auth {
   background: #3b5999;
+}
+/* line 53, ../sass/_forms.sass */
+#send-fancy .email-group {
+  display: none;
+}
+/* line 56, ../sass/_forms.sass */
+#send-fancy .toggle-group {
+  margin-bottom: 1rem;
+  overflow: auto;
+}
+/* line 60, ../sass/_forms.sass */
+#send-fancy .custom-toggle {
+  float: left;
+  width: 50%;
+}
+/* line 63, ../sass/_forms.sass */
+#send-fancy .custom-toggle input[type="radio"] {
+  display: none;
+}
+/* line 65, ../sass/_forms.sass */
+#send-fancy .custom-toggle .option {
+  background: #666666;
+  color: white;
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+}
+/* line 70, ../sass/_forms.sass */
+#send-fancy .custom-toggle input:checked + .option {
+  background: red;
+}
+/* line 72, ../sass/_forms.sass */
+#send-fancy .custom-toggle:first-child .option {
+  border-radius: 3px 0 0 3px;
+}
+/* line 74, ../sass/_forms.sass */
+#send-fancy .custom-toggle:last-child .option {
+  border-radius: 0 3px 3px 0;
 }
