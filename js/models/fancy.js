@@ -4,7 +4,7 @@ var Fancy = Backbone.Model.extend({
 		message: null,
 		user: null
 	},
-	url: '/api/fancy',
+	url: '/api/fancies',
 	initialize: function(){
 
 	}
