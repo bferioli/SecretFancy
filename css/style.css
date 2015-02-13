@@ -194,21 +194,45 @@ html {
     padding: 30px;
   }
 }
-/* line 2, ../sass/_forms.sass */
+@keyframes pulse {
+  /* line 2, ../sass/_forms.sass */
+  0%, 100% {
+    background-color: #aaaaaa;
+  }
+
+  /* line 4, ../sass/_forms.sass */
+  50% {
+    background-color: #cccccc;
+  }
+}
+
+@-webkit-keyframes pulse {
+  /* line 8, ../sass/_forms.sass */
+  0%, 100% {
+    background-color: #aaaaaa;
+  }
+
+  /* line 10, ../sass/_forms.sass */
+  50% {
+    background-color: #cccccc;
+  }
+}
+
+/* line 14, ../sass/_forms.sass */
 #send-fancy button, #send-fancy label, #send-fancy input, #send-fancy textarea {
   display: block;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
   border-radius: 3px;
 }
-/* line 8, ../sass/_forms.sass */
+/* line 20, ../sass/_forms.sass */
 #send-fancy label {
   margin-bottom: 0.33rem;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
 }
-/* line 14, ../sass/_forms.sass */
+/* line 26, ../sass/_forms.sass */
 #send-fancy input[type="email"], #send-fancy input[type="text"], #send-fancy textarea {
   color: #222222;
   border: 2px solid #dddddd;
@@ -221,13 +245,13 @@ html {
   -o-transition: border-color 200ms ease-in-out;
   transition: border-color 200ms ease-in-out;
 }
-/* line 22, ../sass/_forms.sass */
+/* line 34, ../sass/_forms.sass */
 #send-fancy input[type="email"]:focus, #send-fancy input[type="text"]:focus, #send-fancy textarea:focus {
   border-color: red;
   box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.2);
   outline: none;
 }
-/* line 27, ../sass/_forms.sass */
+/* line 39, ../sass/_forms.sass */
 #send-fancy button, #send-fancy input[type="button"], #send-fancy input[type="submit"] {
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
@@ -236,7 +260,14 @@ html {
   color: white;
   border: none;
 }
-/* line 34, ../sass/_forms.sass */
+/* line 46, ../sass/_forms.sass */
 #send-fancy button:disabled, #send-fancy input[type="button"]:disabled, #send-fancy input[type="submit"]:disabled {
-  background: #666666;
+  background: #aaaaaa;
+  animation: pulse 1s infinite;
+  -webkit-animation: pulse 1s infinite;
+  -webkit-transform: translateZ(0);
+}
+/* line 51, ../sass/_forms.sass */
+#send-fancy button.fb-auth, #send-fancy input[type="button"].fb-auth, #send-fancy input[type="submit"].fb-auth {
+  background: #3b5999;
 }

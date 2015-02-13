@@ -1,3 +1,15 @@
+@keyframes pulse
+	0%, 100%
+		background-color: #aaa
+	50%
+		background-color: #ccc
+
+@-webkit-keyframes pulse
+	0%, 100%
+		background-color: #aaa
+	50%
+		background-color: #ccc
+
 #send-fancy
 	button, label, input, textarea
 		display: block
@@ -32,4 +44,9 @@
 		color: $white
 		border: none
 		&:disabled
-			background: #666
+			background: #aaa
+			animation: pulse 1s infinite
+			-webkit-animation: pulse 1s infinite
+			-webkit-transform: translateZ(0)
+		&.fb-auth
+			background: #3b5999
