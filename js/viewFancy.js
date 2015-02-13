@@ -8,8 +8,8 @@ app.viewFancy = {
 		// 	id = href.substr(href.lastIndexOf('/') + 1);
 
 		var id = window.location.hash.substr(1);
-		
-		this.model = new Fancy({_id: id});
+
+		this.model = new Fancy({id: id});
 		this.model.fetch();
 		this.views.model = new FancyMessage({model:this.model});
 	}
