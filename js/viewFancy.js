@@ -7,10 +7,8 @@ app.viewFancy = {
 		this.views.model = new FancyMessage({model:this.model});
 	},
 	init: function() {
-		// var href = window.location.href,
-		// 	id = href.substr(href.lastIndexOf('/') + 1);
-
-		var id = window.location.hash.substr(1);
+		var href = window.location.href,
+			id = href.substr(href.lastIndexOf('/') + 1);
 
 		this.model = new Fancy({_id: id});
 		this.model.fetch({success: $.proxy(this.showMessage, this)});
