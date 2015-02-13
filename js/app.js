@@ -1,37 +1,32 @@
 var app = app || {};
 
-app.core = {
-	views: {
-
+app.frontpage = {
+	views: {},
+	initAuthButton: function() {
+		this.dom.sendButton.removeAttr('disabled');
+		this.dom.sendButton.on('click', $.proxy(this.newFancy, this));
 	},
 	createForm: function() {
-		if (auth && auth.user)
-			this.model.set({'first_name': auth.user.get('first_name')});
+		this.model.set({'first_name': app.auth.user.get('first_name')});
 		this.views.form = new FancyForm({model:this.model});
 	},
 	newFancy: function() {
-		if (auth && auth.authenticated)
+		if (app.auth && app.auth.authenticated)
 			this.createForm();
-		else if (auth)
-			auth.doLogin();
+		else if (app.auth)
+			app.auth.doLogin(this.createForm);
 	},
 	init: function() {
+		this.dom = {
+			sendButton: $('#send-button')
+		};
 		this.model = new Fancy();
-		app.dom.sendButton.on('click', $.proxy(this.newFancy, this));
-	}
-};
-
-app.init = function() {
-	app.dom = {
-		sendButton: $('#send-button')
-	};
-
-	for (module in app) {
-		if (app.hasOwnProperty(module) && typeof app[module] === 'object' && app[module].init)
-			app[module].init();
+		this.initAuthButton();
 	}
 };
 
 $(document).ready(function(){
-	app.init();
+	app.auth.init(function(){
+		app.frontpage.init();
+	});
 });

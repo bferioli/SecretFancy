@@ -236,3 +236,7 @@ html {
   color: white;
   border: none;
 }
+/* line 34, ../sass/_forms.sass */
+#send-fancy button:disabled, #send-fancy input[type="button"]:disabled, #send-fancy input[type="submit"]:disabled {
+  background: #666666;
+}

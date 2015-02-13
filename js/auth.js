@@ -1,4 +1,6 @@
-var auth = {	
+var app = app || {};
+
+app.auth = {	
 	authenticated: false,
 	token: null,
 	user: null,
@@ -8,50 +10,51 @@ var auth = {
 		xfbml      : true,
 		version    : 'v2.1'
 	},
-	checkLogin: function() {
+	checkLogin: function(callback) {
 		var self = this;
 		FB.getLoginStatus(function(response) {
-			self.loginCallback(response);
+			self.loginCallback(response, callback);
 		});
 	},
-	doLogin: function() {
+	doLogin: function(callback) {
 		var self = this;
 		FB.login(function(response){
-			self.loginCallback(response);
+			self.loginCallback(response, callback);
 		});
 	},
 	doLogout: function() {
 		var self = this;
 		FB.logout(function(response) {
-			self.logoutSuccess();
+			self.logoutCallback();
 		});
 	},
-	loginCallback: function(response) {
-		if (response.status === 'connected')
-			this.loginSuccess(response.authResponse.accessToken);
-		else
-			console.log('Login failed.');
-	},
-	loginSuccess: function(token) {
+	loginCallback: function(response, callback) {
 		var self = this;
 
-		this.authenticated = true;
-		this.token = token;
+		if (response.status === 'connected') {
+			this.authenticated = true;
+			this.token = response.authResponse.accessToken;
 
-		FB.api('/me', function(response) {
-			self.user = new User(response);
-		});
+			FB.api('/me', function(response) {
+				self.user = new User(response);
+				if (callback)
+					callback();
+			});
+		} else if (callback) {
+			callback();
+		}
 	},
-	logoutSuccess: function() {
+	logoutCallback: function() {
 		this.authenticated = true;
 		this.token = null;
 		this.user = null;
 	},
-	init: function() {
+	init: function(callback) {
 		var self = this;
+
 		window.fbAsyncInit = function() {
 			FB.init(self.settings);
-			self.checkLogin();
+			self.checkLogin(callback);
 		};
 
 		(function(d, s, id) {
@@ -63,5 +66,3 @@ var auth = {
 		}(document, 'script', 'facebook-jssdk'));
 	}
 };
-
-auth.init();
