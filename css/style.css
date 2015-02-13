@@ -111,10 +111,11 @@ h4 {
 h5 {
   font-size: 1.4rem;
   font-family: "ThirstyScriptBold";
-  margin-bottom: 1.4rem;
+  line-height: 2rem;
+  margin: 2.8rem 0 1.4rem;
 }
 
-/* line 38, ../sass/_typography.sass */
+/* line 39, ../sass/_typography.sass */
 .heart {
   color: red;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -124,14 +125,13 @@ h5 {
 }
 
 /* line 46, ../sass/_typography.sass */
-.message p {
+.message {
   font-size: 1.3rem;
-  font-weight: 300;
   line-height: 1.6rem;
   margin-bottom: 1.6rem;
 }
 
-/* line 52, ../sass/_typography.sass */
+/* line 51, ../sass/_typography.sass */
 .new {
   font-size: 0.8rem;
   background: red;
@@ -143,18 +143,18 @@ h5 {
 }
 
 @media (min-width: 720px) {
-  /* line 62, ../sass/_typography.sass */
+  /* line 61, ../sass/_typography.sass */
   h1 {
     font-size: 4.5rem;
     margin: 4.5rem 0 3rem;
   }
-  /* line 65, ../sass/_typography.sass */
+  /* line 64, ../sass/_typography.sass */
   h1.small {
     font-size: 3rem;
     margin: 2rem 0;
   }
 
-  /* line 68, ../sass/_typography.sass */
+  /* line 67, ../sass/_typography.sass */
   h2 {
     font-size: 2rem;
     line-height: 2.5rem;
