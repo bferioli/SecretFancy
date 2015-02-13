@@ -18,9 +18,16 @@
 		</div>
 
 		<script type="text/x-handlebars-template" id="FancyMessageTemplate">
-			<h5>Dear {{first_name}},</h5>
-			<p class="message">{{message}}</p>
-			<h5>Love,<br>Your Secret Admirer</h5>
+			<div class="message">
+				<h5>Dear {{first_name}},</h5>
+				<p>{{message}}</p>
+				<h5>Love,<br>Your Secret Admirer</h5>
+			</div>
+			<form id="match-form">
+				<label for="match_name">Feel like this about someone? Enter their name to see if they're your secret admirer.</label>
+				<input type="text" name="match_name" id="match_name">
+				<input type="submit" value="Check">
+			</form>
 		</script>
 
 		<script type="text/javascript" src="/js/lib/jquery.js"></script>

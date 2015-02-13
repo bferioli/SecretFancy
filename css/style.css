@@ -219,20 +219,20 @@ html {
 }
 
 /* line 14, ../sass/_forms.sass */
-#send-fancy button, #send-fancy label, #send-fancy input, #send-fancy textarea {
+#send-fancy button, #send-fancy label, #send-fancy input, #send-fancy textarea, #match-form button, #match-form label, #match-form input, #match-form textarea {
   display: block;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
   border-radius: 3px;
 }
 /* line 20, ../sass/_forms.sass */
-#send-fancy label {
+#send-fancy label, #match-form label {
   margin-bottom: 0.33rem;
   font-size: 0.8rem;
   font-weight: 700;
 }
 /* line 25, ../sass/_forms.sass */
-#send-fancy input[type="email"], #send-fancy input[type="text"], #send-fancy textarea {
+#send-fancy input[type="email"], #send-fancy input[type="text"], #send-fancy textarea, #match-form input[type="email"], #match-form input[type="text"], #match-form textarea {
   color: #222222;
   border: 2px solid #dddddd;
   font-size: 1.4rem;
@@ -245,13 +245,13 @@ html {
   transition: border-color 200ms ease-in-out;
 }
 /* line 33, ../sass/_forms.sass */
-#send-fancy input[type="email"]:focus, #send-fancy input[type="text"]:focus, #send-fancy textarea:focus {
+#send-fancy input[type="email"]:focus, #send-fancy input[type="text"]:focus, #send-fancy textarea:focus, #match-form input[type="email"]:focus, #match-form input[type="text"]:focus, #match-form textarea:focus {
   border-color: red;
   box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.2);
   outline: none;
 }
 /* line 38, ../sass/_forms.sass */
-#send-fancy button, #send-fancy input[type="button"], #send-fancy input[type="submit"] {
+#send-fancy button, #send-fancy input[type="button"], #send-fancy input[type="submit"], #match-form button, #match-form input[type="button"], #match-form input[type="submit"] {
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
   background: red;
@@ -260,50 +260,50 @@ html {
   border: none;
 }
 /* line 45, ../sass/_forms.sass */
-#send-fancy button:disabled, #send-fancy input[type="button"]:disabled, #send-fancy input[type="submit"]:disabled {
+#send-fancy button:disabled, #send-fancy input[type="button"]:disabled, #send-fancy input[type="submit"]:disabled, #match-form button:disabled, #match-form input[type="button"]:disabled, #match-form input[type="submit"]:disabled {
   background: #aaaaaa;
   animation: pulse 1s infinite;
   -webkit-animation: pulse 1s infinite;
   -webkit-transform: translateZ(0);
 }
 /* line 50, ../sass/_forms.sass */
-#send-fancy button.fb-auth, #send-fancy input[type="button"].fb-auth, #send-fancy input[type="submit"].fb-auth {
+#send-fancy button.fb-auth, #send-fancy input[type="button"].fb-auth, #send-fancy input[type="submit"].fb-auth, #match-form button.fb-auth, #match-form input[type="button"].fb-auth, #match-form input[type="submit"].fb-auth {
   background: #3b5999;
 }
 /* line 53, ../sass/_forms.sass */
-#send-fancy .email-group {
+#send-fancy .email-group, #match-form .email-group {
   display: none;
 }
 /* line 56, ../sass/_forms.sass */
-#send-fancy .toggle-group {
+#send-fancy .toggle-group, #match-form .toggle-group {
   margin-bottom: 1rem;
   overflow: auto;
 }
 /* line 60, ../sass/_forms.sass */
-#send-fancy .custom-toggle {
+#send-fancy .custom-toggle, #match-form .custom-toggle {
   float: left;
   width: 50%;
 }
 /* line 63, ../sass/_forms.sass */
-#send-fancy .custom-toggle input[type="radio"] {
+#send-fancy .custom-toggle input[type="radio"], #match-form .custom-toggle input[type="radio"] {
   display: none;
 }
 /* line 65, ../sass/_forms.sass */
-#send-fancy .custom-toggle .option {
+#send-fancy .custom-toggle .option, #match-form .custom-toggle .option {
   background: #666666;
   color: white;
   font-size: 1.4rem;
   padding: 0.5rem 1rem;
 }
 /* line 70, ../sass/_forms.sass */
-#send-fancy .custom-toggle input:checked + .option {
+#send-fancy .custom-toggle input:checked + .option, #match-form .custom-toggle input:checked + .option {
   background: red;
 }
 /* line 72, ../sass/_forms.sass */
-#send-fancy .custom-toggle:first-child .option {
+#send-fancy .custom-toggle:first-child .option, #match-form .custom-toggle:first-child .option {
   border-radius: 3px 0 0 3px;
 }
 /* line 74, ../sass/_forms.sass */
-#send-fancy .custom-toggle:last-child .option {
+#send-fancy .custom-toggle:last-child .option, #match-form .custom-toggle:last-child .option {
   border-radius: 0 3px 3px 0;
 }
