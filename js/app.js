@@ -1,6 +1,7 @@
 var app = app || {};
 
 app.frontpage = {
+	model: null,
 	views: {},
 	initAuthButton: function() {
 		this.dom.sendButton.removeAttr('disabled');
