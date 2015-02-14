@@ -15,7 +15,8 @@
 		display: block
 		font-family: $sans-serif
 		width: 100%
-		border-radius: 3px
+		border-radius: 5px
+		-webkit-appearance: none
 
 	label
 		margin-bottom: .33rem
@@ -54,7 +55,10 @@
 		display: none
 
 	.toggle-group
+		border-radius: 5px
+		background: #eee
 		margin-bottom: 1rem
+		padding: 0.3rem 0.3rem 0 0.3rem
 		overflow: auto
 	
 	.custom-toggle
@@ -63,14 +67,14 @@
 		input[type="radio"]
 			display: none
 		.option
-			background: #666
-			color: $white
-			font-size: 1.4rem
+			color: #222
+			font-size: 1rem
+			font-weight: 400
 			padding: 0.5rem 1rem
+			text-align: center
 		input:checked + .option
-			background: $red
-		&:first-child .option
-			border-radius: 3px 0 0 3px
-		&:last-child .option
-			border-radius: 0 3px 3px 0
+			background: #2591DA
+			color: #fff
+			border-radius: 5px
+
 

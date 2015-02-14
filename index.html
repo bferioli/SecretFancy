@@ -10,16 +10,7 @@
 		<div id="main">
 			<header>
 				<h1>Secret <span class="heart">&#9829;</span> Fancy</h1>
-				<h2 class="subtitle">Have someone you secretly fancy?<br>Send them an anonymous note letting them know.</h2>
-				</p>
-				<p>
-					<h4><span class="new">New</span> Find out if they fancy you back.</h4>
-					<ul>
-						<li>At the bottom of your note we ask if your fancy feels the same about anyone.</li>
-						<li>If they answer yes, we ask them for the name of their fancy.</li>
-						<li>If they enter your name, we let you both know it's a match!</li>
-					</ul>
-				</p>
+				<h2 class="subtitle">Send an anonymous note to someone you fancy.<br>Get matched if the feeling is mutual.</h2>
 			</header>
 			<section id="send-fancy">
 				<button id="send-button" disabled>Connecting to Facebook...</button>
@@ -28,21 +19,26 @@
 		</div>
 
 		<script type="text/x-handlebars-template" id="FancyFormTemplate">
+			<div class="intro">
+				<h4>Welcome {{user.first_name}}!</h4>
+				<p>At the bottom of your note we'll ask who the recipient fancies.</p>
+				<p>If they enter your name, we let you both know it's a match!</p>
+			</div>
 			<form id="fancy-form" action="">
 				<div class="toggle-group">
 					<label class="custom-toggle">
 						<input type="radio" name="delivery" value="text" checked>
-						<div class="option">Text <span class="tiny">(US only)</span></div>
+						<div class="option">Send via text</div>
 					</label>
 					<label class="custom-toggle">
 						<input type="radio" name="delivery" value="email">
-						<div class="option">Email</div>
+						<div class="option">Send via email</div>
 					</label>
 				</div>
 				<label for="first_name">Recipient's first name:</label>
 				<input type="text" name="first_name" id="first_name" required>
 				<div class="phone-group">
-					<label for="phone">Recipient's phone number:</label>
+					<label for="phone">Recipient's phone number (US only):</label>
 					<input type="text" name="phone" id="phone">
 				</div>
 				<div class="email-group">
