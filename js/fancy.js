@@ -1,4 +1,5 @@
 require.config({
+	baseUrl: '/js',
 	paths: {
 		jquery: 'lib/jquery',
 		maskedinput: 'lib/jquery.maskedinput',

@@ -4,9 +4,9 @@ define([
 	'backbone',
 	'handlebars',
 	'models/fancy',
-	'views/fancyMessage.js',
-	'views/matchModal.js',
-	'views/noMatchModal.js',
+	'views/fancyMessage',
+	'views/matchModal',
+	'views/noMatchModal',
 	'auth'
 ], function($, _, Backbone, Handlebars, Fancy, FancyMessage, MatchModal, NoMatchModal, Auth){
 	ViewFancy = {
@@ -36,7 +36,7 @@ define([
 			this.views.message = new FancyMessage({model:this.model});
 			this.views.message.on('checkMatch', $.proxy(this.checkMatch, this));
 		},
-		init: function() {
+		initialize: function() {
 			var href = window.location.href,
 				id = href.substr(href.lastIndexOf('/') + 1);
 
