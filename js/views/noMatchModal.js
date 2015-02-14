@@ -14,6 +14,6 @@ var NoMatchModal = Backbone.View.extend({
 		var source = $('#NoMatchModalTemplate').html();
 		var template = Handlebars.compile(source);
 		this.$el.html(template(this.model.toJSON()));
-		$('#fancy-message').append(this.$el);
+		$('#main').append(this.$el);
 	}
 });

@@ -1,5 +1,5 @@
 var FancyForm = Backbone.View.extend({
-	el: '#send-fancy',
+	id: '#send-fancy',
 	events: {
 		'change input[name=delivery]': 'changeDelivery',
 		'change #first_name': 'changeFirstName',
@@ -27,9 +27,16 @@ var FancyForm = Backbone.View.extend({
 	changeMessage: function(){
 		this.model.set({'message': this.message.val()});
 	},
+	sendCallback: function() {
+		var self = this;
+		this.trigger('messageSent');
+		this.$el.slideUp(function(){
+			self.remove();
+		});
+	},
 	sendMessage: function(e){
 		e.preventDefault();
-		this.model.save();
+		this.model.save({}, {success: $.proxy(this.sendCallback, this)});
 	},
 	initialize: function(){
 		this.render();
@@ -47,5 +54,6 @@ var FancyForm = Backbone.View.extend({
 		var source = $('#FancyFormTemplate').html();
 		var template = Handlebars.compile(source);
 		this.$el.html(template(this.model.toJSON()));
+		$('#content').append(this.$el);
 	}
 });

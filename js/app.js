@@ -16,15 +16,21 @@ app.frontpage = {
 		this.dom.sendButton.on('click', $.proxy(this.newFancy, this));
 	},
 	createForm: function() {
+		this.dom.sendButton.hide();
 		this.model = new Fancy();
 		this.model.set({'user': app.auth.user.toJSON()});
 		this.views.form = new FancyForm({model:this.model});
+		this.views.form.on('messageSent', $.proxy(this.sendCallback, this));
 	},
 	newFancy: function() {
 		if (app.auth && app.auth.user)
 			this.createForm();
 		else if (app.auth)
 			app.auth.doLogin($.proxy(this.newFancy, this));
+	},
+	sendCallback: function() {
+		this.dom.sendButton.show();
+		this.views.modal = new MessageSentModal({model:this.model});
 	},
 	init: function() {
 		this.dom = {

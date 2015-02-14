@@ -1,5 +1,5 @@
-var MatchModal = Backbone.View.extend({
-	id: 'match-modal',
+var MessageSentModal = Backbone.View.extend({
+	id: 'message-sent-modal',
 	events: {
 		'click .close-modal': 'closeModal'
 	},
@@ -11,7 +11,7 @@ var MatchModal = Backbone.View.extend({
 		this.render();
 	},
 	render: function(){
-		var source = $('#MatchModalTemplate').html();
+		var source = $('#MessageSentModalTemplate').html();
 		var template = Handlebars.compile(source);
 		this.$el.html(template(this.model.toJSON()));
 		$('#main').append(this.$el);

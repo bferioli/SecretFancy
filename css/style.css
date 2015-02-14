@@ -196,7 +196,7 @@ html {
 }
 
 /* line 14, ../sass/_layout.sass */
-#match-modal {
+#match-modal, #message-sent-modal {
   position: fixed;
   top: 0;
   right: 0;
@@ -205,7 +205,7 @@ html {
   background: rgba(0, 0, 0, 0.7);
 }
 /* line 21, ../sass/_layout.sass */
-#match-modal .modal-content {
+#match-modal .modal-content, #message-sent-modal .modal-content {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -216,31 +216,30 @@ html {
   box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.7);
   margin-top: -160px;
   margin-left: -150px;
+  text-align: center;
 }
-/* line 32, ../sass/_layout.sass */
-#match-modal h1 {
+/* line 33, ../sass/_layout.sass */
+#match-modal h1, #message-sent-modal h1 {
   color: #e22020;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 7rem;
-  text-align: center;
   margin: 2rem 0;
   line-height: 5rem;
   position: relative;
   top: -1rem;
 }
 /* line 41, ../sass/_layout.sass */
-#match-modal h1 .match {
+#match-modal h1 .match, #message-sent-modal h1 .match {
   font-size: 8rem;
 }
 /* line 43, ../sass/_layout.sass */
-#match-modal h3 {
+#match-modal h3, #message-sent-modal h3 {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0.5rem 0 1.5rem;
-  text-align: center;
 }
-/* line 48, ../sass/_layout.sass */
-#match-modal a {
+/* line 47, ../sass/_layout.sass */
+#match-modal a, #message-sent-modal a {
   background: #e22020;
   border: none;
   border-radius: 5px;
@@ -258,16 +257,15 @@ html {
   left: 1rem;
   right: 1rem;
 }
-/* line 65, ../sass/_layout.sass */
-#match-modal a:hover {
+/* line 64, ../sass/_layout.sass */
+#match-modal a:hover, #message-sent-modal a:hover {
   background: #cd1c1c;
 }
-/* line 67, ../sass/_layout.sass */
-#match-modal .no-thanks {
+/* line 66, ../sass/_layout.sass */
+#match-modal .no-thanks, #message-sent-modal .no-thanks {
   color: #2591da;
   cursor: pointer;
   font-size: 0.8em;
-  text-align: center;
   text-decoration: underline;
   position: absolute;
   bottom: 3.75rem;
@@ -276,18 +274,18 @@ html {
 }
 
 @media (min-width: 720px) {
-  /* line 79, ../sass/_layout.sass */
+  /* line 77, ../sass/_layout.sass */
   html {
     font-size: 16px;
   }
 
-  /* line 82, ../sass/_layout.sass */
+  /* line 80, ../sass/_layout.sass */
   #main {
     padding: 30px;
   }
 
-  /* line 86, ../sass/_layout.sass */
-  #match-modal .modal-content {
+  /* line 84, ../sass/_layout.sass */
+  #match-modal .modal-content, #message-sent-modal .modal-content {
     width: 500px;
     margin-left: -250px;
   }
@@ -316,22 +314,24 @@ html {
   }
 }
 
-/* line 14, ../sass/_forms.sass */
-#send-fancy button, #send-fancy label, #send-fancy input, #send-fancy textarea, #match-form button, #match-form label, #match-form input, #match-form textarea {
+/* line 13, ../sass/_forms.sass */
+button, label, input, textarea {
   display: block;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
   border-radius: 5px;
   -webkit-appearance: none;
 }
-/* line 21, ../sass/_forms.sass */
-#send-fancy label, #match-form label {
+
+/* line 20, ../sass/_forms.sass */
+label {
   margin-bottom: 0.33rem;
   font-size: 0.8rem;
   font-weight: 700;
 }
-/* line 26, ../sass/_forms.sass */
-#send-fancy input[type="email"], #send-fancy input[type="text"], #send-fancy textarea, #match-form input[type="email"], #match-form input[type="text"], #match-form textarea {
+
+/* line 25, ../sass/_forms.sass */
+input[type="email"], input[type="text"], textarea {
   color: #222222;
   border: 2px solid #dddddd;
   font-size: 1.4rem;
@@ -343,18 +343,20 @@ html {
   -o-transition: border-color 200ms ease-in-out;
   transition: border-color 200ms ease-in-out;
 }
-/* line 34, ../sass/_forms.sass */
-#send-fancy input[type="email"]:focus, #send-fancy input[type="text"]:focus, #send-fancy textarea:focus, #match-form input[type="email"]:focus, #match-form input[type="text"]:focus, #match-form textarea:focus {
+/* line 33, ../sass/_forms.sass */
+input[type="email"]:focus, input[type="text"]:focus, textarea:focus {
   border-color: #e22020;
   box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.2);
   outline: none;
 }
-/* line 39, ../sass/_forms.sass */
-#send-fancy textarea, #match-form textarea {
+
+/* line 38, ../sass/_forms.sass */
+textarea {
   height: 12rem;
 }
-/* line 42, ../sass/_forms.sass */
-#send-fancy button, #send-fancy input[type="button"], #send-fancy input[type="submit"], #match-form button, #match-form input[type="button"], #match-form input[type="submit"] {
+
+/* line 41, ../sass/_forms.sass */
+button, input[type="button"], input[type="submit"] {
   cursor: pointer;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
@@ -364,59 +366,63 @@ html {
   border: none;
   outline: none;
 }
-/* line 51, ../sass/_forms.sass */
-#send-fancy button:disabled, #send-fancy input[type="button"]:disabled, #send-fancy input[type="submit"]:disabled, #match-form button:disabled, #match-form input[type="button"]:disabled, #match-form input[type="submit"]:disabled {
+/* line 50, ../sass/_forms.sass */
+button:disabled, input[type="button"]:disabled, input[type="submit"]:disabled {
   background: #aaaaaa;
   animation: pulse 1s infinite;
   -webkit-animation: pulse 1s infinite;
   -webkit-transform: translateZ(0);
 }
-/* line 56, ../sass/_forms.sass */
-#send-fancy button:hover, #send-fancy input[type="button"]:hover, #send-fancy input[type="submit"]:hover, #match-form button:hover, #match-form input[type="button"]:hover, #match-form input[type="submit"]:hover {
+/* line 55, ../sass/_forms.sass */
+button:hover, input[type="button"]:hover, input[type="submit"]:hover {
   background: #cd1c1c;
 }
-/* line 58, ../sass/_forms.sass */
-#send-fancy button.fb-auth, #send-fancy input[type="button"].fb-auth, #send-fancy input[type="submit"].fb-auth, #match-form button.fb-auth, #match-form input[type="button"].fb-auth, #match-form input[type="submit"].fb-auth {
+/* line 57, ../sass/_forms.sass */
+button.fb-auth, input[type="button"].fb-auth, input[type="submit"].fb-auth {
   background: #3b5999;
 }
-/* line 61, ../sass/_forms.sass */
-#send-fancy .error, #match-form .error {
+
+/* line 60, ../sass/_forms.sass */
+.error {
   display: none;
   color: #e22020;
   font-size: 0.9rem;
   margin: 0 0 1rem;
 }
-/* line 67, ../sass/_forms.sass */
-#send-fancy .email-group, #match-form .email-group {
+
+/* line 66, ../sass/_forms.sass */
+.email-group {
   display: none;
 }
-/* line 70, ../sass/_forms.sass */
-#send-fancy .toggle-group, #match-form .toggle-group {
+
+/* line 69, ../sass/_forms.sass */
+.toggle-group {
   border-radius: 5px;
   background: #eeeeee;
   margin-bottom: 1rem;
   padding: 0.3rem 0.3rem 0 0.3rem;
   overflow: auto;
 }
-/* line 77, ../sass/_forms.sass */
-#send-fancy .custom-toggle, #match-form .custom-toggle {
+
+/* line 76, ../sass/_forms.sass */
+.custom-toggle {
   float: left;
   width: 50%;
 }
-/* line 80, ../sass/_forms.sass */
-#send-fancy .custom-toggle input[type="radio"], #match-form .custom-toggle input[type="radio"] {
+/* line 79, ../sass/_forms.sass */
+.custom-toggle input[type="radio"] {
   display: none;
 }
-/* line 82, ../sass/_forms.sass */
-#send-fancy .custom-toggle .option, #match-form .custom-toggle .option {
+/* line 81, ../sass/_forms.sass */
+.custom-toggle .option {
   color: #222222;
   font-size: 1rem;
   font-weight: 400;
   padding: 0.5rem 1rem;
   text-align: center;
 }
-/* line 88, ../sass/_forms.sass */
-#send-fancy .custom-toggle input:checked + .option, #match-form .custom-toggle input:checked + .option {
+/* line 87, ../sass/_forms.sass */
+.custom-toggle input:checked + .option {
   background: #2591da;
   color: white;
   border-radius: 5px;
