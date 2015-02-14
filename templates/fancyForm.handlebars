@@ -1,0 +1,33 @@
+<div class="intro">
+	<h4>Welcome {{user.first_name}}!</h4>
+	<p>At the bottom of your note we'll ask the recipient who they fancy.</p>
+	<p>If they enter your name we'll let you both know it's a match!</p>
+</div>
+<form id="fancy-form" action="">
+	<div class="toggle-group">
+		<label class="custom-toggle">
+			<input type="radio" name="delivery" value="text" checked>
+			<div class="option">Send via text</div>
+		</label>
+		<label class="custom-toggle">
+			<input type="radio" name="delivery" value="email">
+			<div class="option">Send via email</div>
+		</label>
+	</div>
+	<label for="first_name">Recipient's first name:</label>
+	<input type="text" name="first_name" id="first_name" required>
+	<div class="phone-group">
+		<label for="phone">Recipient's phone number (US only):</label>
+		<input type="text" name="phone" id="phone">
+	</div>
+	<div class="email-group">
+		<label for="email">Recipient's email:</label>
+		<input type="email" name="email" id="email">
+	</div>
+	<label for="message">Message to your fancy:</label>
+	<textarea name="message" id="message" required></textarea>
+	<label for="user_email">Your email (to notify you of matches):</label>
+	<input type="email" name="user_email" id="user_email" value="{{user.email}}" required>
+	<div class="error"></div>
+	<input type="submit" value="Send now" id="send-now">
+</form>
