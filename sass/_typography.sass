@@ -1,13 +1,16 @@
 +font-face("ThirstyScriptBold", font-files("/fonts/2D548D_0_0.eot", "/fonts/2D548D_0_0.eot?#iefix", "/fonts/2D548D_0_0.woff", "/fonts/2D548D_0_0.ttf"))
++font-face("ThirstyScriptRegular", font-files("/fonts/2D5AA6_0_0.eot", "/fonts/2D5AA6_0_0.eot?#iefix", "/fonts/2D5AA6_0_0.woff", "/fonts/2D5AA6_0_0.ttf"))
+
 
 $sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif
-$script: "ThirstyScriptBold"
+$script-bold: "ThirstyScriptBold"
+$script: "ThirstyScriptRegular"
 
 body
 	font-family: $sans-serif
 
 h1
-	font-family: $script
+	font-family: $script-bold
 	font-size: 3rem
 	margin: 2rem 0
 	text-align: center
@@ -35,6 +38,7 @@ h5
 	font-family: $script
 	line-height: 2rem
 	margin: 2.8rem 0 1.4rem
+	-webkit-font-smoothing: antialiased
 
 .intro
 	font-size: 1.1rem

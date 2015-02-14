@@ -68,12 +68,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url(/fonts/2D548D_0_0.eot) format('embedded-opentype'), url(/fonts/2D548D_0_0.eot?#iefix) format('embedded-opentype'), url(/fonts/2D548D_0_0.woff) format('woff'), url(/fonts/2D548D_0_0.ttf) format('truetype');
 }
 
-/* line 6, ../sass/_typography.sass */
+@font-face {
+  font-family: "ThirstyScriptRegular";
+  src: url(/fonts/2D5AA6_0_0.eot) format('embedded-opentype'), url(/fonts/2D5AA6_0_0.eot?#iefix) format('embedded-opentype'), url(/fonts/2D5AA6_0_0.woff) format('woff'), url(/fonts/2D5AA6_0_0.ttf) format('truetype');
+}
+
+/* line 9, ../sass/_typography.sass */
 body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 9, ../sass/_typography.sass */
+/* line 12, ../sass/_typography.sass */
 h1 {
   font-family: "ThirstyScriptBold";
   font-size: 3rem;
@@ -81,25 +86,25 @@ h1 {
   text-align: center;
 }
 
-/* line 15, ../sass/_typography.sass */
+/* line 18, ../sass/_typography.sass */
 h2 {
   font-size: 1.6rem;
   font-weight: 300;
   text-align: center;
   line-height: 2rem;
 }
-/* line 20, ../sass/_typography.sass */
+/* line 23, ../sass/_typography.sass */
 h2.subtitle {
   margin: 2rem 0;
 }
 
-/* line 23, ../sass/_typography.sass */
+/* line 26, ../sass/_typography.sass */
 h3 {
   font-size: 1.7rem;
   margin: 1.7rem 0;
 }
 
-/* line 27, ../sass/_typography.sass */
+/* line 30, ../sass/_typography.sass */
 h4 {
   font-size: 1.4rem;
   font-weight: 700;
@@ -107,27 +112,28 @@ h4 {
   margin: 0.6rem 0;
 }
 
-/* line 33, ../sass/_typography.sass */
+/* line 36, ../sass/_typography.sass */
 h5 {
   font-size: 1.4rem;
-  font-family: "ThirstyScriptBold";
+  font-family: "ThirstyScriptRegular";
   line-height: 2rem;
   margin: 2.8rem 0 1.4rem;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* line 39, ../sass/_typography.sass */
+/* line 43, ../sass/_typography.sass */
 .intro {
   font-size: 1.1rem;
   line-height: 1.4rem;
   margin-bottom: 2rem;
   text-align: center;
 }
-/* line 44, ../sass/_typography.sass */
+/* line 48, ../sass/_typography.sass */
 .intro h4 {
   margin-bottom: 1rem;
 }
 
-/* line 47, ../sass/_typography.sass */
+/* line 51, ../sass/_typography.sass */
 .heart {
   color: #e22020;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -136,14 +142,14 @@ h5 {
   top: -0.25em;
 }
 
-/* line 54, ../sass/_typography.sass */
+/* line 58, ../sass/_typography.sass */
 .message {
   font-size: 1.3rem;
   line-height: 1.6rem;
   margin-bottom: 1.6rem;
 }
 
-/* line 59, ../sass/_typography.sass */
+/* line 63, ../sass/_typography.sass */
 .new {
   font-size: 0.8rem;
   background: #e22020;
@@ -155,18 +161,18 @@ h5 {
 }
 
 @media (min-width: 720px) {
-  /* line 69, ../sass/_typography.sass */
+  /* line 73, ../sass/_typography.sass */
   h1 {
     font-size: 4.5rem;
     margin: 4.5rem 0 3rem;
   }
-  /* line 72, ../sass/_typography.sass */
+  /* line 76, ../sass/_typography.sass */
   h1.small {
     font-size: 3rem;
     margin: 2rem 0;
   }
 
-  /* line 75, ../sass/_typography.sass */
+  /* line 79, ../sass/_typography.sass */
   h2 {
     font-size: 2rem;
     line-height: 2.5rem;
