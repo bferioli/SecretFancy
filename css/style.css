@@ -264,6 +264,10 @@ html {
   outline: none;
 }
 /* line 39, ../sass/_forms.sass */
+#send-fancy textarea, #match-form textarea {
+  height: 12rem;
+}
+/* line 42, ../sass/_forms.sass */
 #send-fancy button, #send-fancy input[type="button"], #send-fancy input[type="submit"], #match-form button, #match-form input[type="button"], #match-form input[type="submit"] {
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
@@ -272,22 +276,22 @@ html {
   color: white;
   border: none;
 }
-/* line 46, ../sass/_forms.sass */
+/* line 49, ../sass/_forms.sass */
 #send-fancy button:disabled, #send-fancy input[type="button"]:disabled, #send-fancy input[type="submit"]:disabled, #match-form button:disabled, #match-form input[type="button"]:disabled, #match-form input[type="submit"]:disabled {
   background: #aaaaaa;
   animation: pulse 1s infinite;
   -webkit-animation: pulse 1s infinite;
   -webkit-transform: translateZ(0);
 }
-/* line 51, ../sass/_forms.sass */
+/* line 54, ../sass/_forms.sass */
 #send-fancy button.fb-auth, #send-fancy input[type="button"].fb-auth, #send-fancy input[type="submit"].fb-auth, #match-form button.fb-auth, #match-form input[type="button"].fb-auth, #match-form input[type="submit"].fb-auth {
   background: #3b5999;
 }
-/* line 54, ../sass/_forms.sass */
+/* line 57, ../sass/_forms.sass */
 #send-fancy .email-group, #match-form .email-group {
   display: none;
 }
-/* line 57, ../sass/_forms.sass */
+/* line 60, ../sass/_forms.sass */
 #send-fancy .toggle-group, #match-form .toggle-group {
   border-radius: 5px;
   background: #eeeeee;
@@ -295,16 +299,16 @@ html {
   padding: 0.3rem 0.3rem 0 0.3rem;
   overflow: auto;
 }
-/* line 64, ../sass/_forms.sass */
+/* line 67, ../sass/_forms.sass */
 #send-fancy .custom-toggle, #match-form .custom-toggle {
   float: left;
   width: 50%;
 }
-/* line 67, ../sass/_forms.sass */
+/* line 70, ../sass/_forms.sass */
 #send-fancy .custom-toggle input[type="radio"], #match-form .custom-toggle input[type="radio"] {
   display: none;
 }
-/* line 69, ../sass/_forms.sass */
+/* line 72, ../sass/_forms.sass */
 #send-fancy .custom-toggle .option, #match-form .custom-toggle .option {
   color: #222222;
   font-size: 1rem;
@@ -312,7 +316,7 @@ html {
   padding: 0.5rem 1rem;
   text-align: center;
 }
-/* line 75, ../sass/_forms.sass */
+/* line 78, ../sass/_forms.sass */
 #send-fancy .custom-toggle input:checked + .option, #match-form .custom-toggle input:checked + .option {
   background: #2591da;
   color: white;
