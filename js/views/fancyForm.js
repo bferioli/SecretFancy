@@ -36,7 +36,30 @@ var FancyForm = Backbone.View.extend({
 	},
 	sendMessage: function(e){
 		e.preventDefault();
-		this.model.save({}, {success: $.proxy(this.sendCallback, this)});
+		var valid = this.validateForm();
+		if (valid)
+			this.model.save({}, {success: $.proxy(this.sendCallback, this)});
+	},
+	showError: function(err){
+		this.errorMsg.text(err);
+		this.errorMsg.show();
+	},
+	validateForm: function(){
+		if (this.model.get('delivery') === 'text' && this.phone.val() === ''){
+			this.showError('Please enter a phone number');
+			return false;
+		} else if (this.model.get('delivery') === 'email' && this.email.val() === '') {
+			this.showError('Please enter a valid email address');
+			return false;
+		} else if (this.firstName.val() === '') {
+			this.showError('Please enter a first name');
+			return false;
+		} else if (this.message.val() === '') {
+			this.showError('Please enter a message');
+			return false;
+		} else {
+			return true;
+		}
 	},
 	initialize: function(){
 		this.render();
@@ -47,6 +70,7 @@ var FancyForm = Backbone.View.extend({
 		this.email = this.$el.find('#email');
 		this.emailGroup = this.$el.find('.email-group');
 		this.message = this.$el.find('#message');
+		this.errorMsg = this.$el.find('.error');
 
 		this.phone.mask("(999) 999-9999");
 	},
