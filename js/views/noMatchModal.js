@@ -3,8 +3,6 @@ define([
 	'underscore',
 	'backbone',
 	'handlebars',
-	// Using the Require.js text! plugin, we are loaded raw text
-	// which will be used as our views primary template
 	'text!templates/noMatchModal.handlebars'
 ], function($, _, Backbone, Handlebars, noMatchModalTemplate){
 	var NoMatchModal = Backbone.View.extend({

@@ -6,10 +6,11 @@ require.config({
 		underscore: 'lib/underscore',
 		backbone: 'lib/backbone',
 		handlebars: 'lib/handlebars',
-		templates: '../templates'
+		templates: '../templates',
+		text: 'lib/text'
 	}
 });
 
-require(['viewFancy'], function(App){
-	App.initialize();
+require(['viewFancy'], function(ViewFancy){
+	ViewFancy.initialize();
 });

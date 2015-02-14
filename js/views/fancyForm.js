@@ -4,8 +4,6 @@ define([
 	'underscore',
 	'backbone',
 	'handlebars',
-	// Using the Require.js text! plugin, we are loaded raw text
-	// which will be used as our views primary template
 	'text!templates/fancyForm.handlebars'
 ], function($, MaskedInput, _, Backbone, Handlebars, fancyFormTemplate){
 	var FancyForm = Backbone.View.extend({
@@ -59,26 +57,21 @@ define([
 		showError: function(err){
 			this.errorMsg.text(err);
 			this.errorMsg.show();
+			return false;
 		},
 		validateForm: function(){
-			if (this.model.get('delivery') === 'text' && this.phone.val() === ''){
-				this.showError('Please enter a phone number');
-				return false;
-			} else if (this.model.get('delivery') === 'email' && this.email.val() === '') {
-				this.showError('Please enter a valid email address');
-				return false;
-			} else if (this.firstName.val() === '') {
-				this.showError('Please enter a first name');
-				return false;
-			} else if (this.message.val() === '') {
-				this.showError('Please enter a message');
-				return false;
-			} else if (this.userEmail.val() === '') {
-				this.showError('Please enter your email address');
-				return false;
-			} else {
+			if (this.model.get('delivery') === 'text' && this.phone.val() === '')
+				return this.showError('Please enter a phone number');
+			else if (this.model.get('delivery') === 'email' && this.email.val() === '')
+				return this.showError('Please enter a valid email address');
+			else if (this.firstName.val() === '')
+				return this.showError('Please enter a first name');
+			else if (this.message.val() === '')
+				return this.showError('Please enter a message');
+			else if (this.userEmail.val() === '')
+				return this.showError('Please enter your email address');
+			else
 				return true;
-			}
 		},
 		initialize: function(){
 			this.render();

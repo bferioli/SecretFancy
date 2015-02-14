@@ -7,8 +7,7 @@ define([
 	'views/fancyMessage',
 	'views/matchModal',
 	'views/noMatchModal',
-	'auth'
-], function($, _, Backbone, Handlebars, Fancy, FancyMessage, MatchModal, NoMatchModal, Auth){
+], function($, _, Backbone, Handlebars, Fancy, FancyMessage, MatchModal, NoMatchModal){
 	ViewFancy = {
 		model: null,
 		views: {},

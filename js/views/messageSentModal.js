@@ -3,8 +3,6 @@ define([
 	'underscore',
 	'backbone',
 	'handlebars',
-	// Using the Require.js text! plugin, we are loaded raw text
-	// which will be used as our views primary template
 	'text!templates/messageSentModal.handlebars'
 ], function($, _, Backbone, Handlebars, messageSentModalTemplate){
 	var MessageSentModal = Backbone.View.extend({

@@ -3,8 +3,6 @@ define([
 	'underscore',
 	'backbone',
 	'handlebars',
-	// Using the Require.js text! plugin, we are loaded raw text
-	// which will be used as our views primary template
 	'text!templates/fancyMessage.handlebars'
 ], function($, _, Backbone, Handlebars, fancyMessageTemplate){
 	var FancyMessage = Backbone.View.extend({
@@ -17,10 +15,8 @@ define([
 
 			var name = this.matchName.val();
 
-			if (name === '') {
-				this.showError('Please enter a name to check.');
-				return;
-			}
+			if (name === '')
+				return this.showError('Please enter a name to check.');
 
 			this.model.set({match_name: name});
 			this.trigger('checkMatch');
@@ -28,6 +24,7 @@ define([
 		showError: function(err){
 			this.errorMsg.text(err);
 			this.errorMsg.show();
+			return false;
 		},
 		initialize: function(){
 			this.render();
