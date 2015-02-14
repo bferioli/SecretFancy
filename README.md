@@ -33,5 +33,5 @@ I acheived my goal of getting the app built and production-ready in three days, 
 * Take UI from __alright__ to __delight__
 * ✓ ~~Implement RequireJS for module loading~~
 * Implement Grunt for Sass compilation and JS minification
-* Clean up and refactor Sass styles
+* ✓ ~~Clean up and refactor Sass styles~~
 * ✓ ~~Externalize Handlebars templates into separate files~~
