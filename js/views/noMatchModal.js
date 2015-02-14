@@ -6,7 +6,8 @@ define([
 	'text!templates/noMatchModal.handlebars'
 ], function($, _, Backbone, Handlebars, noMatchModalTemplate){
 	var NoMatchModal = Backbone.View.extend({
-		id: 'match-modal',
+		id: 'no-match-modal',
+		className: 'modal',
 		events: {
 			'click .close-modal': 'closeModal'
 		},

@@ -7,6 +7,7 @@ define([
 ], function($, _, Backbone, Handlebars, matchModalTemplate){
 	var MatchModal = Backbone.View.extend({
 		id: 'match-modal',
+		className: 'modal',
 		events: {
 			'click .close-modal': 'closeModal'
 		},

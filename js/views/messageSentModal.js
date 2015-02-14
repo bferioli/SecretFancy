@@ -7,6 +7,7 @@ define([
 ], function($, _, Backbone, Handlebars, messageSentModalTemplate){
 	var MessageSentModal = Backbone.View.extend({
 		id: 'message-sent-modal',
+		className: 'modal',
 		events: {
 			'click .close-modal': 'closeModal'
 		},
