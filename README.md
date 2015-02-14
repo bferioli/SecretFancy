@@ -14,6 +14,7 @@ __Frontend:__
 * [jQuery](https://github.com/jquery/jquery)
 * [Backbone](https://github.com/jashkenas/backbone)
 * [Handlebars](https://github.com/wycats/handlebars.js)
+* [RequireJS](https://github.com/jrburke/requirejs)
 * Facebook Authentication
 
 __[API](https://github.com/bferioli/SecretFancyAPI):__
