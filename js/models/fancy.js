@@ -2,6 +2,7 @@ var Fancy = Backbone.Model.extend({
 	defaults: {
 		delivery: 'text',
 		first_name: null,
+		match_name: null,
 		phone: null,
 		email: null,
 		message: null,

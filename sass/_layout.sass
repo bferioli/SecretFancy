@@ -11,8 +11,78 @@ html
 	& > header
 		margin-bottom: 3rem
 
+#match-modal
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background: rgba(0,0,0,0.7)
+	.modal-content
+		position: fixed
+		top: 50%
+		left: 50%
+		width: 300px
+		height: 320px
+		background: #fff
+		padding: 1rem
+		box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.7)
+		margin-top: -160px
+		margin-left: -150px
+	h1
+		color: $red
+		font-family: $sans-serif
+		font-size: 7rem
+		text-align: center
+		margin: 2rem 0
+		line-height: 5rem
+		position: relative
+		top: -1rem
+		.match
+			font-size: 8rem
+	h3
+		font-size: 1.5rem
+		font-weight: 700
+		margin: 0.5rem 0 1.5rem
+		text-align: center
+	a
+		background: $red
+		border: none
+		border-radius: 5px
+		color: $white
+		display: block
+		font-family: $sans-serif
+		font-size: 1rem
+		margin-top: 1.5rem
+		outline: none
+		padding: 0.5rem 1rem
+		text-align: center
+		text-decoration: none
+		position: absolute
+		bottom: 1rem
+		left: 1rem
+		right: 1rem
+		&:hover
+			background: $red-hover
+	.no-thanks
+		color: #2591DA
+		cursor: pointer
+		font-size: 0.8em
+		text-align: center
+		text-decoration: underline
+		position: absolute
+		bottom: 3.75rem
+		right: 0
+		left: 0
+
 @media (min-width:720px)
 	html
 		font-size: 16px
+
 	#main
 		padding: 30px
+
+	#match-modal
+		.modal-content
+			width: 500px
+			margin-left: -250px

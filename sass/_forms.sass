@@ -40,19 +40,29 @@
 		height: 12rem
 
 	button, input[type="button"], input[type="submit"]
+		cursor: pointer
 		margin-bottom: 1rem
 		padding: 0.5rem 1rem
 		background: $red
 		font-size: 1.4rem
 		color: $white
 		border: none
+		outline: none
 		&:disabled
 			background: #aaa
 			animation: pulse 1s infinite
 			-webkit-animation: pulse 1s infinite
 			-webkit-transform: translateZ(0)
+		&:hover
+			background: $red-hover
 		&.fb-auth
 			background: #3b5999
+
+	.error
+		display: none
+		color: $red
+		font-size: 0.9rem
+		margin: 0 0 1rem
 
 	.email-group
 		display: none

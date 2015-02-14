@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>SecretFancy - Send annonymous love notes.</title>
+		<title>SecretFancy - Send anonymous love notes.</title>
 		<link href='/css/style.css' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic' rel='stylesheet' type='text/css'>
 	</head>
@@ -24,10 +24,30 @@
 				<h5>Love,<br>Your Secret Admirer</h5>
 			</div>
 			<form id="match-form">
-				<label for="match_name">Feel like this about someone? Enter their first name to see if they're your secret admirer.</label>
+				<label for="match_name">Do you fancy someone? Enter their first name, if it's your secret admirer you'll both be notified. (Limit 1 check)</label>
 				<input type="text" name="match_name" id="match_name" placeholder="e.g. John">
-				<input type="submit" value="Check">
+				<div class="error"></div>
+				<input type="submit" value="Check for match">
 			</form>
+		</script>
+
+		<script type="text/x-handlebars-template" id="MatchModalTemplate">
+			<div class="modal-content">
+				<h1 class="match">&#9829;</h1>
+				<h3>It's a match!</h3>
+				<p>{{match_name}} sent you this lovely message. They will receive a message letting them know that you fancy them too. Go on lovebirds, have fun!</p>
+				<a href="#" class="close-modal">Close</a>
+			</div>
+		</script>
+
+		<script type="text/x-handlebars-template" id="NoMatchModalTemplate">
+			<div class="modal-content">
+				<h1>:(</h1>
+				<h3>{{match_name}} isn't your secret admirer.</h3>
+				<p>Not to worry though, why not send them an anonymous fancy?</p>
+				<p class="no-thanks close-modal">No thanks</p>
+				<a href="/">Send {{match_name}} a fancy now</a>
+			</div>
 		</script>
 
 		<script type="text/javascript" src="/js/lib/jquery.js"></script>
@@ -37,6 +57,8 @@
 
 		<script type="text/javascript" src="/js/models/fancy.js"></script>
 		<script type="text/javascript" src="/js/views/fancyMessage.js"></script>
+		<script type="text/javascript" src="/js/views/matchModal.js"></script>
+		<script type="text/javascript" src="/js/views/noMatchModal.js"></script>
 
 		<script type="text/javascript" src="/js/auth.js"></script>
 		<script type="text/javascript" src="/js/viewFancy.js"></script>
