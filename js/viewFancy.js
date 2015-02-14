@@ -3,10 +3,10 @@ define([
 	'underscore',
 	'backbone',
 	'handlebars',
-	'models/fancy'
-	'views/fancyMessage.js'
-	'views/matchModal.js'
-	'views/noMatchModal.js'
+	'models/fancy',
+	'views/fancyMessage.js',
+	'views/matchModal.js',
+	'views/noMatchModal.js',
 	'auth'
 ], function($, _, Backbone, Handlebars, Fancy, FancyMessage, MatchModal, NoMatchModal, Auth){
 	ViewFancy = {
