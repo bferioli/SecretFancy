@@ -30,7 +30,7 @@ __[API](https://github.com/bferioli/SecretFancyAPI):__
 I acheived my goal of getting the app built and production-ready in three days, but of course there are still some things I'd like to do:
 
 * Take UI from __alright__ to __delight__
-* Implement RequireJS for module loading
+* ✓ ~~Implement RequireJS for module loading~~
 * Implement Grunt for Sass compilation and JS minification
 * Clean up and refactor Sass styles
-* Externalize Handlebars templates into separate files
+* ✓ ~~Externalize Handlebars templates into separate files~~
