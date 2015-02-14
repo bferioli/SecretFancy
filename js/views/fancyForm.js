@@ -6,6 +6,7 @@ var FancyForm = Backbone.View.extend({
 		'change #phone': 'changePhone',
 		'change #email': 'changeEmail',
 		'change #message': 'changeMessage',
+		'change #user_email': 'changeUserEmail',
 		'submit #fancy-form': 'sendMessage'
 	},
 	changeDelivery: function(){
@@ -27,6 +28,11 @@ var FancyForm = Backbone.View.extend({
 	changeMessage: function(){
 		this.model.set({'message': this.message.val()});
 	},
+	changeUserEmail: function(){
+		var user = this.model.get('user');
+		user.email = this.userEmail.val();
+		this.model.set({'user': user});
+	},
 	sendCallback: function() {
 		var self = this;
 		this.trigger('messageSent');
@@ -37,6 +43,7 @@ var FancyForm = Backbone.View.extend({
 	sendMessage: function(e){
 		e.preventDefault();
 		var valid = this.validateForm();
+		console.log(this.model.toJSON());
 		if (valid)
 			this.model.save({}, {success: $.proxy(this.sendCallback, this)});
 	},
@@ -57,6 +64,9 @@ var FancyForm = Backbone.View.extend({
 		} else if (this.message.val() === '') {
 			this.showError('Please enter a message');
 			return false;
+		} else if (this.userEmail.val() === '') {
+			this.showError('Please enter your email address');
+			return false;
 		} else {
 			return true;
 		}
@@ -70,6 +80,7 @@ var FancyForm = Backbone.View.extend({
 		this.email = this.$el.find('#email');
 		this.emailGroup = this.$el.find('.email-group');
 		this.message = this.$el.find('#message');
+		this.userEmail = this.$el.find('#user_email');
 		this.errorMsg = this.$el.find('.error');
 
 		this.phone.mask("(999) 999-9999");

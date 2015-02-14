@@ -50,6 +50,8 @@
 				</div>
 				<label for="message">Message to your fancy:</label>
 				<textarea name="message" id="message" required></textarea>
+				<label for="user_email">Your email (to notify you of matches):</label>
+				<input type="email" name="user_email" id="user_email" value="{{user.email}}" required>
 				<div class="error"></div>
 				<input type="submit" value="Send now" id="send-now">
 			</form>
