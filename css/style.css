@@ -85,26 +85,31 @@ h1 {
   margin: 2rem 0;
   text-align: center;
 }
+/* line 17, ../sass/_typography.sass */
+h1 a {
+  text-decoration: none;
+  color: black;
+}
 
-/* line 18, ../sass/_typography.sass */
+/* line 21, ../sass/_typography.sass */
 h2 {
   font-size: 1.6rem;
   font-weight: 300;
   text-align: center;
   line-height: 2rem;
 }
-/* line 23, ../sass/_typography.sass */
+/* line 26, ../sass/_typography.sass */
 h2.subtitle {
   margin: 2rem 0;
 }
 
-/* line 26, ../sass/_typography.sass */
+/* line 29, ../sass/_typography.sass */
 h3 {
   font-size: 1.7rem;
   margin: 1.7rem 0;
 }
 
-/* line 30, ../sass/_typography.sass */
+/* line 33, ../sass/_typography.sass */
 h4 {
   font-size: 1.4rem;
   font-weight: 700;
@@ -112,7 +117,7 @@ h4 {
   margin: 0.6rem 0;
 }
 
-/* line 36, ../sass/_typography.sass */
+/* line 39, ../sass/_typography.sass */
 h5 {
   font-size: 1.4rem;
   font-family: "ThirstyScriptRegular";
@@ -121,20 +126,20 @@ h5 {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 43, ../sass/_typography.sass */
+/* line 46, ../sass/_typography.sass */
 .intro {
   font-size: 1.1rem;
   line-height: 1.4rem;
   margin-bottom: 2rem;
   text-align: center;
 }
-/* line 48, ../sass/_typography.sass */
+/* line 51, ../sass/_typography.sass */
 .intro h4 {
   margin-bottom: 1rem;
 }
 
-/* line 51, ../sass/_typography.sass */
-.heart {
+/* line 54, ../sass/_typography.sass */
+.heart, a .heart {
   color: #e22020;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.5em;
@@ -142,14 +147,14 @@ h5 {
   top: -0.25em;
 }
 
-/* line 58, ../sass/_typography.sass */
+/* line 61, ../sass/_typography.sass */
 .message {
   font-size: 1.3rem;
   line-height: 1.6rem;
   margin-bottom: 1.6rem;
 }
 
-/* line 63, ../sass/_typography.sass */
+/* line 66, ../sass/_typography.sass */
 .new {
   font-size: 0.8rem;
   background: #e22020;
@@ -161,18 +166,18 @@ h5 {
 }
 
 @media (min-width: 720px) {
-  /* line 73, ../sass/_typography.sass */
+  /* line 76, ../sass/_typography.sass */
   h1 {
     font-size: 4.5rem;
     margin: 4.5rem 0 3rem;
   }
-  /* line 76, ../sass/_typography.sass */
+  /* line 79, ../sass/_typography.sass */
   h1.small {
     font-size: 3rem;
     margin: 2rem 0;
   }
 
-  /* line 79, ../sass/_typography.sass */
+  /* line 82, ../sass/_typography.sass */
   h2 {
     font-size: 2rem;
     line-height: 2.5rem;
@@ -191,17 +196,41 @@ html {
 }
 
 /* line 7, ../sass/_layout.sass */
+html, body {
+  height: 100%;
+}
+
+/* line 10, ../sass/_layout.sass */
 #main {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 20px 50px;
+  min-height: 100%;
+  margin-bottom: -4rem;
 }
-/* line 11, ../sass/_layout.sass */
+/* line 16, ../sass/_layout.sass */
+#main:after {
+  content: "";
+  display: block;
+}
+/* line 19, ../sass/_layout.sass */
 #main > header {
   margin-bottom: 3rem;
 }
 
-/* line 14, ../sass/_layout.sass */
+/* line 22, ../sass/_layout.sass */
+footer {
+  color: #666666;
+  font-size: 0.9rem;
+  height: 4rem;
+  text-align: center;
+}
+/* line 27, ../sass/_layout.sass */
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* line 30, ../sass/_layout.sass */
 #match-modal, #message-sent-modal {
   position: fixed;
   top: 0;
@@ -210,7 +239,7 @@ html {
   left: 0;
   background: rgba(0, 0, 0, 0.7);
 }
-/* line 21, ../sass/_layout.sass */
+/* line 37, ../sass/_layout.sass */
 #match-modal .modal-content, #message-sent-modal .modal-content {
   position: fixed;
   top: 50%;
@@ -224,7 +253,7 @@ html {
   margin-left: -150px;
   text-align: center;
 }
-/* line 33, ../sass/_layout.sass */
+/* line 49, ../sass/_layout.sass */
 #match-modal h1, #message-sent-modal h1 {
   color: #e22020;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -234,17 +263,17 @@ html {
   position: relative;
   top: -1rem;
 }
-/* line 41, ../sass/_layout.sass */
+/* line 57, ../sass/_layout.sass */
 #match-modal h1 .match, #message-sent-modal h1 .match {
   font-size: 8rem;
 }
-/* line 43, ../sass/_layout.sass */
+/* line 59, ../sass/_layout.sass */
 #match-modal h3, #message-sent-modal h3 {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0.5rem 0 1.5rem;
 }
-/* line 47, ../sass/_layout.sass */
+/* line 63, ../sass/_layout.sass */
 #match-modal a, #message-sent-modal a {
   background: #e22020;
   border: none;
@@ -263,11 +292,11 @@ html {
   left: 1rem;
   right: 1rem;
 }
-/* line 64, ../sass/_layout.sass */
+/* line 80, ../sass/_layout.sass */
 #match-modal a:hover, #message-sent-modal a:hover {
   background: #cd1c1c;
 }
-/* line 66, ../sass/_layout.sass */
+/* line 82, ../sass/_layout.sass */
 #match-modal .no-thanks, #message-sent-modal .no-thanks {
   color: #2591da;
   cursor: pointer;
@@ -280,17 +309,17 @@ html {
 }
 
 @media (min-width: 720px) {
-  /* line 77, ../sass/_layout.sass */
+  /* line 93, ../sass/_layout.sass */
   html {
     font-size: 16px;
   }
 
-  /* line 80, ../sass/_layout.sass */
+  /* line 96, ../sass/_layout.sass */
   #main {
-    padding: 30px;
+    padding: 30px 30px 60px;
   }
 
-  /* line 84, ../sass/_layout.sass */
+  /* line 100, ../sass/_layout.sass */
   #match-modal .modal-content, #message-sent-modal .modal-content {
     width: 500px;
     margin-left: -250px;

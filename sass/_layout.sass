@@ -4,12 +4,28 @@
 html
 	font-size: 14px
 
+html, body
+	height: 100%
+
 #main
 	max-width: 800px
 	margin: 0 auto
-	padding: 20px
+	padding: 20px 20px 50px
+	min-height: 100%
+	margin-bottom: -4rem
+	&:after
+		content: ""
+		display: block
 	& > header
 		margin-bottom: 3rem
+
+footer
+	color: #666
+	font-size: 0.9rem
+	height: 4rem
+	text-align: center
+	p
+		margin: 0.5rem 0
 
 #match-modal, #message-sent-modal
 	position: fixed
@@ -78,7 +94,7 @@ html
 		font-size: 16px
 
 	#main
-		padding: 30px
+		padding: 30px 30px 60px
 
 	#match-modal, #message-sent-modal
 		.modal-content
