@@ -3,7 +3,7 @@
 
 ![It's a match!](http://secretfancy.com/images/match.jpg)
 
-This is a GSD (Get S**t Done) project that I did solo in the three days leading up to Valentine's Day 2015. My goal was to provide a simple, anonymous way for 'secret admirers' to share their feelings, and provide a mechanism through which they could be matched with the recipient _only_ if the feeling is mututal.
+This is a GSD (Get S**t Done) project that I did solo in the three days leading up to Valentine's Day 2015. My goal was to provide a simple, anonymous way for 'secret admirers' to share their feelings, and provide a mechanism through which they could be matched with the recipient _only_ if the feeling is mutual.
 
 ------
 
