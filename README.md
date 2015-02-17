@@ -3,7 +3,7 @@
 
 ![It's a match!](http://secretfancy.com/images/match.jpg)
 
-This is a GSD (Get S**t Done) project that I did solo in the three days leading up to Valentine's Day 2015. My goal was to provide a simple, anonymous way for 'secret admirers' to share their feelings, and provide a mechanism through which they could be matched with the recipient _only_ if the feeling is mututal.
+This is a GSD (Get S**t Done) project that I did solo in the three days leading up to Valentine's Day 2015. My goal was to provide a simple, anonymous way for 'secret admirers' to share their feelings, and provide a mechanism through which they could be matched with the recipient _only_ if the feeling is mutual.
 
 ------
 
@@ -33,5 +33,5 @@ I acheived my goal of getting the app built and production-ready in three days, 
 * Take UI from __alright__ to __delight__
 * ✓ ~~Implement RequireJS for module loading~~
 * Implement Grunt for Sass compilation and JS minification
-* Clean up and refactor Sass styles
+* ✓ ~~Clean up and refactor Sass styles~~
 * ✓ ~~Externalize Handlebars templates into separate files~~
