@@ -23,7 +23,7 @@ define(['jquery'], function($){
       for(var b = 0; b < this.hearts.length; b++) {
         var heart = this.hearts[b];
         heart.y += heart.ys;
-        if(heart.x > this.w || heart.y > this.h) {
+        if(heart.y > this.h) {
           heart.x = Math.random() * this.w;
           heart.y = -1 * this.heartHeight;
         }
@@ -54,7 +54,7 @@ define(['jquery'], function($){
           height: scale * this.heartHeight,
           width: scale * this.heartWidth,
           opacity: scale
-        })
+        });
       }
       
       setInterval($.proxy(this.draw, this), 30);
