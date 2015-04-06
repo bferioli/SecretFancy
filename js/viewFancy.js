@@ -3,11 +3,12 @@ define([
   'underscore',
   'backbone',
   'handlebars',
+  'heartsBackground',
   'models/fancy',
   'views/fancyMessage',
   'views/matchModal',
   'views/noMatchModal',
-], function($, _, Backbone, Handlebars, Fancy, FancyMessage, MatchModal, NoMatchModal){
+], function($, _, Backbone, Handlebars, HeartsBackground, Fancy, FancyMessage, MatchModal, NoMatchModal){
   ViewFancy = {
     model: null,
     views: {},
@@ -41,6 +42,7 @@ define([
 
       this.model = new Fancy({_id: id});
       this.model.fetch({success: $.proxy(this.showMessage, this)});
+      HeartsBackground.initialize();
     }
   };
 

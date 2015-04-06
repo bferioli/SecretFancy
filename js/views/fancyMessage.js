@@ -6,7 +6,7 @@ define([
   'text!templates/fancyMessage.handlebars'
 ], function($, _, Backbone, Handlebars, fancyMessageTemplate){
   var FancyMessage = Backbone.View.extend({
-    el: '#fancy-message',
+    el: '#content',
     events: {
       'submit #match-form': 'checkMatch'
     },

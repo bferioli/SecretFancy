@@ -4,16 +4,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>SecretFancy - Send anonymous love notes.</title>
     <link href='/css/style.css' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic' rel='stylesheet' type='text/css'>
+    <script src="//use.typekit.net/xuj1jlj.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
     <script data-main="/js/fancy" src="/js/lib/require.js"></script>
   </head>
   <body>
-    <div id="main">
-      <header>
+    <canvas id="canvas"></canvas>
+    <header>
+      <div class="container">
         <h1><a href="/">Secret <span class="heart">&#9829;</span> Fancy</a></h1>
-      </header>
-      <section id="fancy-message">
-        
+      </div>
+    </header>
+    <div class="container" id="main">
+      <section id="content">
+
+        <div class="message">
+          <h5>Dear Brandon,</h5>
+          <p class="message-body">This is a message.<br><br>It has multiple lines.</p>
+          <h5>Love,<br>Your Secret Admirer</h5>
+        </div>
+        <form id="match-form">
+          <label for="match_name">
+            <h6>Fancy someone? What's their first name?</h6>
+            <p>If it's your secret admirer you'll both be notified. (Limit 1 check)</p>
+          </label>
+          <input type="text" name="match_name" id="match_name" placeholder="e.g. John">
+          <div class="error"></div>
+          <input type="submit" value="Check for match">
+        </form>
+
       </section>
     </div>
     <footer>

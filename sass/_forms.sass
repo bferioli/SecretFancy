@@ -1,37 +1,35 @@
 @keyframes pulse
   0%, 100%
-    background-color: #aaa
+    background-color: $pink
   50%
-    background-color: #ccc
+    background-color: $pink-hover
 
 @-webkit-keyframes pulse
   0%, 100%
-    background-color: #aaa
+    background-color: $pink
   50%
-    background-color: #ccc
+    background-color: $pink-hover
 
 button, label, input, textarea
   display: block
   font-family: $sans-serif
   width: 100%
-  border-radius: 5px
   -webkit-appearance: none
 
 label
   margin-bottom: 0.33rem
-  font-size: 0.8rem
-  font-weight: 700
+  font-size: 1rem
 
 input[type="email"], input[type="text"], textarea
   color: $dark-grey
   border: 2px solid $light-grey
-  font-size: 1.4rem
+  font-size: 1.6rem
   font-weight: 300
   padding: 0.5rem
   margin-bottom: 1rem
   +transition(border-color 200ms ease-in-out)
   &:focus
-    border-color: $red
+    border-color: $pink
     box-shadow: 0px 0px 10px $red-shadow
     outline: none
 
@@ -42,51 +40,60 @@ button, input[type="button"], input[type="submit"]
   cursor: pointer
   margin-bottom: 1rem
   padding: 0.5rem 1rem
-  background: $red
+  background: $pink
   font-size: 1.4rem
+  font-weight: 700
   color: $white
   border: none
   outline: none
+  text-transform: uppercase
+  &#send-button
+    margin-bottom: 0
   &#send-button:disabled
     background: #aaa
     animation: pulse 1s infinite
     -webkit-animation: pulse 1s infinite
     -webkit-transform: translateZ(0)
   &:hover
-    background: $red-hover
+    background: $pink-hover
   &.fb-auth
     background: $fb-blue
 
 .error
   display: none
-  color: $red
-  font-size: 0.9rem
+  color: $pink
+  font-size: 1rem
   margin: 0 0 1rem
 
 .email-group
   display: none
 
 .toggle-group
-  border-radius: 5px
   background: #eee
   margin-bottom: 1rem
-  padding: 0.3rem 0.3rem 0 0.3rem
+  padding: 0.3rem
   overflow: auto
 
 .custom-toggle
   float: left
+  margin-bottom: 0
   width: 50%
   input[type="radio"]
     display: none
   .option
     color: $dark-grey
     font-size: 1rem
-    font-weight: 400
-    padding: 0.5rem 1rem
+    font-weight: 700
+    padding: 1rem
     text-align: center
+    text-transform: uppercase
   input:checked + .option
     background: $blue
     color: $white
-    border-radius: 5px
+
+#match-form
+  border-top: 2px solid $light-grey
+  margin-top: 2rem
+  padding-top: 2rem
 
 

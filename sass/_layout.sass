@@ -5,22 +5,51 @@ html
   font-size: 14px
 
 html, body
+  background: $pink
   height: 100%
 
-#main
+#canvas
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 0
+
+.container
   max-width: 800px
   margin: 0 auto
-  padding: 20px 20px 50px
+  position: relative
+
+header
+  background: $white
+  height: 4rem
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 1
+  .container
+    padding: 0 30px
+
+#main
+  padding: 5rem 20px 50px
   min-height: 100%
   margin-bottom: -4rem
+  z-index: 1
   &:after
     content: ""
     display: block
-  & > header
-    margin-bottom: 3rem
+
+#content
+  background: $white
+  padding: 2rem
+  margin-bottom: 3rem
 
 footer
   height: 4rem
+  position: relative
+  z-index: 1
   p
     margin: 0.5rem 0
 
@@ -28,6 +57,10 @@ footer
   html
     font-size: 16px
 
+  header
+    .container
+      padding: 0 60px
+
   #main
-    padding: 30px 30px 60px
+    padding: 6rem 30px 60px
 

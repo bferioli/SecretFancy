@@ -4,15 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>SecretFancy - Send anonymous love notes.</title>
     <link href='/css/style.css' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic' rel='stylesheet' type='text/css'>
+    <script src="//use.typekit.net/xuj1jlj.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
     <script data-main="/js/index" src="/js/lib/require.js"></script>
   </head>
   <body>
-    <div id="main">
-      <header>
+    <canvas id="canvas"></canvas>
+    <header>
+      <div class="container">
         <h1>Secret <span class="heart">&#9829;</span> Fancy</h1>
-        <h2 class="subtitle">Send an anonymous note to someone you fancy.<br>Get matched if the feeling is mutual.</h2>
-      </header>
+      </div>
+    </header>
+    <div class="container" id="main">
+      <h2 class="subtitle">Send an anonymous note to someone you fancy.</h2>
+      <h2 class="subtitle">Get matched if the feeling is mutual.</h2>
       <section id="content">
         <button id="send-button" disabled>Connecting to Facebook...</button>
       </section>

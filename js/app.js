@@ -4,12 +4,13 @@ define([
   'underscore',
   'backbone',
   'handlebars',
+  'heartsBackground',
   'models/fancy',
   'models/user',
   'views/fancyForm',
   'views/messageSentModal',
   'auth'
-], function($, MaskedInput, _, Backbone, Handlebars, Fancy, User, FancyForm, MessageSentModal, Auth){
+], function($, MaskedInput, _, Backbone, Handlebars, HeartsBackground, Fancy, User, FancyForm, MessageSentModal, Auth){
   var App = {
     dom: {},
     model: null,
@@ -47,6 +48,7 @@ define([
       this.dom.sendButton = $('#send-button');
 
       Auth.initialize($.proxy(this.initAuthButton, this));
+      HeartsBackground.initialize();
     }
   };
 
