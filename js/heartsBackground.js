@@ -5,7 +5,7 @@ define(['jquery'], function($){
     hearts: [],
     heartImage: '/img/icon-heart.png',
     maxHearts: 8,
-    minOpacity: 0.4,
+    minScale: 0.4,
     draw: function() {
       this.setCanvasSize();
       this.ctx.clearRect(0, 0, this.w, this.h);
@@ -45,7 +45,7 @@ define(['jquery'], function($){
       this.ctx = this.canvas.getContext('2d');
 
       for(var a = 0; a < this.maxHearts; a++) {
-        var scale = (Math.random() * (1 - this.minOpacity)) + this.minOpacity;
+        var scale = (Math.random() * (1 - this.minScale)) + this.minScale;
         this.hearts.push({
           x: Math.random() * this.w,
           y: Math.random() * this.h,
