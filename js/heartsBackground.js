@@ -49,7 +49,6 @@ define(['jquery'], function($){
         this.hearts.push({
           x: Math.random() * this.w,
           y: Math.random() * this.h,
-          l: Math.random() * 1,
           ys: Math.random() + 1,
           height: scale * this.heartHeight,
           width: scale * this.heartWidth,
